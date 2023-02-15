@@ -1,5 +1,6 @@
 
 const fastify=require('fastify')({logger:true})
+//const PORT=3000
 
 // Declare a route
 fastify.get('/random/:n', (request, reply) => {
@@ -37,9 +38,11 @@ const isPrime=(n)=>{
   }
   return true;
 }
-
+fastify.get('/',(req,res)=>{
+  res.send("Server is running")
+})
 // // Run the server!
-fastify.listen({ port: 3000 }, (err, address) => {
+fastify.listen({port:3000}, (err, address) => {
   if (err) throw err
   // Server is now listening on ${address}
 })
