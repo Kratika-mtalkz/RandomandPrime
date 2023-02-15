@@ -68,13 +68,11 @@ const isPrime = (n) => {
   return true;
 };
 
-
 function userRoute(fastify, options, done) {
-
-//Endpoint for random numbers
+  //Endpoint for random numbers
   fastify.get("/random/:n", getRandom);
 
-//Endpoint for prime numbers
+  //Endpoint for prime numbers
   fastify.get("/prime/:n", getPrime);
 
   done();
