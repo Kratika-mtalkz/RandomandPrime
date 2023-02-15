@@ -8,6 +8,7 @@ const swaggerConfig = () => {
           "Implementing the concept of API documentation using Fastify, Swagger, and Node.js",
         version: "1.1.0",
       },
+      host: "https://randomandprime.onrender.com",
       tags: [
         {
           name: "Operation",
